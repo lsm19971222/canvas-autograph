@@ -1,5 +1,5 @@
 {
-  "name": "canvas-autograph",
+  "name": "autograph-canvas",
   "version": "1.0.0",
   "description": "用canvas实现签名",
   "main": "dist/autograph.js",
