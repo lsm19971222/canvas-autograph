@@ -53,7 +53,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// CONCATENATED MODULE: ./src/autograph.js
-const autograph = function (canvasWidth = 300, canvasHeight = 150 , textColor = 'black') {
+const autograph = function ({canvasWidth = 300, canvasHeight = 150, imgType = 'image/png', textColor = 'black', saveCb}) {
   // 创建导出容器
   const autographWrap = document.createElement('div')
   autographWrap.classList.add('autographWrap')
@@ -72,7 +72,7 @@ const autograph = function (canvasWidth = 300, canvasHeight = 150 , textColor = 
 
   drawGraph(canvas, content, textColor)
 
-  let buttongrap = operateCanvas(canvas, content)
+  let buttongrap = operateCanvas(canvas, content, imgType, saveCb)
 
   // 添加画布和操作画布按钮
   autographWrap.appendChild(canvas)
@@ -93,9 +93,11 @@ const drawGraph = function (canvas, content, textColor) {
     let startDraw = (event) => {
       let xEnd = event.offsetX
       let yEnd = event.offsetY
-      if (xEnd >= canvas.width - 2 || xEnd < 2 || yEnd >= canvas.height - 2 || yEnd < 2) {
-        canvas.removeEventListener('mousemove', cbMove)
-      }
+
+      //移除鼠标移动事件
+      isRemoveEvent(canvas, cbMove)
+
+      // 绘图
       strokeLine(content, xStart, yStart, xEnd, yEnd, textColor)
       xStart = xEnd
       yStart = yEnd
@@ -105,8 +107,25 @@ const drawGraph = function (canvas, content, textColor) {
   }
 
   canvas.addEventListener('mousedown', cbDown)
+}
+
+// 鼠标移出canvas的那一刻，移除鼠标移动事件
+function isRemoveEvent(canvas, cbMove) {
+  const winMouseEvent = function(event) {
+    if (
+      event.x < canvas.offsetLeft
+      || event.x > canvas.offsetLeft + canvas.width
+      || event.y < canvas.offsetTop
+      || event.y > canvas.offsetTop + canvas.height
+    ) {
+      canvas.removeEventListener('mousemove', cbMove)
+      window.removeEventListener('mousemove', winMouseEvent)
+    }
+  }
+  window.addEventListener('mousemove', winMouseEvent)
   canvas.addEventListener('mouseup', () => {
     canvas.removeEventListener('mousemove', cbMove)
+    window.removeEventListener('mousemove', winMouseEvent)
   })
 }
 
@@ -121,7 +140,7 @@ const strokeLine = function (content, xStart, yStart, xEnd, yEnd, color) {
 }
 
 // 对画布进行相关操作
-const operateCanvas = function (canvas, content) {
+const operateCanvas = function (canvas, content, imgType, saveCb) {
 
   const buttongroup = document.createElement('div')
   buttongroup.classList.add('buttongroup')
@@ -136,10 +155,11 @@ const operateCanvas = function (canvas, content) {
 
   //  保存画布
   function preserveCanvasMeth() {
-    let imgs = canvas.toDataURL("image/jpeg")
+    let imgs = canvas.toDataURL(imgType)
+    saveCb && saveCb(imgs)
     const link = document.createElement('a')
     link.href = imgs
-    link.download = 'autograph.jpg'
+    link.download = `autograph.${imgType ? imgType.split('/')[1] : 'png'}`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -175,6 +195,17 @@ const bindingAttrAndMeth = function (innerText = '', callback) {
 
 
 
+
+// const ele = canvasAutograph({
+//   canvasWidth:500,
+//   canvasHeight:250 ,
+//   imgType: 'image/jpeg',
+//   textColor: 'red',
+//   saveCb: (res) => {
+//     console.log('resssss==', res)
+//   }
+// })
+// document.body.appendChild(ele)
 
 /* harmony default export */ const src = (src_autograph);
 /******/ 	return __webpack_exports__;
