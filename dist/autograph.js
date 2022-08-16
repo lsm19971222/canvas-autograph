@@ -1,1 +1,183 @@
-(()=>{"use strict";var e={74:(e,t,n)=>{n.d(t,{Z:()=>s});var o=n(81),r=n.n(o),a=n(645),c=n.n(a)()(r());c.push([e.id,"* {\n  background-color: aquamarine;\n  padding: 0;\n  margin: 0;\n}\nhtml,\nbody {\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.autographWrap {\n  display: flex;\n  flex-direction: column;\n  border-radius: 5px;\n  overflow: hidden;\n}\n.autographWrap .buttongroup {\n  display: flex;\n  justify-content: space-between;\n  background-color: white;\n}\n.autographWrap .buttongroup .buttons {\n  background-color: #eee;\n  width: 49.9%;\n  height: 35px;\n  cursor: pointer;\n  text-align: center;\n  user-select: none;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n",""]);const s=c},645:e=>{e.exports=function(e){var t=[];return t.toString=function(){return this.map((function(t){var n="",o=void 0!==t[5];return t[4]&&(n+="@supports (".concat(t[4],") {")),t[2]&&(n+="@media ".concat(t[2]," {")),o&&(n+="@layer".concat(t[5].length>0?" ".concat(t[5]):""," {")),n+=e(t),o&&(n+="}"),t[2]&&(n+="}"),t[4]&&(n+="}"),n})).join("")},t.i=function(e,n,o,r,a){"string"==typeof e&&(e=[[null,e,void 0]]);var c={};if(o)for(var s=0;s<this.length;s++){var i=this[s][0];null!=i&&(c[i]=!0)}for(var l=0;l<e.length;l++){var d=[].concat(e[l]);o&&c[d[0]]||(void 0!==a&&(void 0===d[5]||(d[1]="@layer".concat(d[5].length>0?" ".concat(d[5]):""," {").concat(d[1],"}")),d[5]=a),n&&(d[2]?(d[1]="@media ".concat(d[2]," {").concat(d[1],"}"),d[2]=n):d[2]=n),r&&(d[4]?(d[1]="@supports (".concat(d[4],") {").concat(d[1],"}"),d[4]=r):d[4]="".concat(r)),t.push(d))}},t}},81:e=>{e.exports=function(e){return e[1]}},379:e=>{var t=[];function n(e){for(var n=-1,o=0;o<t.length;o++)if(t[o].identifier===e){n=o;break}return n}function o(e,o){for(var a={},c=[],s=0;s<e.length;s++){var i=e[s],l=o.base?i[0]+o.base:i[0],d=a[l]||0,u="".concat(l," ").concat(d);a[l]=d+1;var p=n(u),f={css:i[1],media:i[2],sourceMap:i[3],supports:i[4],layer:i[5]};if(-1!==p)t[p].references++,t[p].updater(f);else{var m=r(f,o);o.byIndex=s,t.splice(s,0,{identifier:u,updater:m,references:1})}c.push(u)}return c}function r(e,t){var n=t.domAPI(t);return n.update(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap&&t.supports===e.supports&&t.layer===e.layer)return;n.update(e=t)}else n.remove()}}e.exports=function(e,r){var a=o(e=e||[],r=r||{});return function(e){e=e||[];for(var c=0;c<a.length;c++){var s=n(a[c]);t[s].references--}for(var i=o(e,r),l=0;l<a.length;l++){var d=n(a[l]);0===t[d].references&&(t[d].updater(),t.splice(d,1))}a=i}}},569:e=>{var t={};e.exports=function(e,n){var o=function(e){if(void 0===t[e]){var n=document.querySelector(e);if(window.HTMLIFrameElement&&n instanceof window.HTMLIFrameElement)try{n=n.contentDocument.head}catch(e){n=null}t[e]=n}return t[e]}(e);if(!o)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");o.appendChild(n)}},216:e=>{e.exports=function(e){var t=document.createElement("style");return e.setAttributes(t,e.attributes),e.insert(t,e.options),t}},565:(e,t,n)=>{e.exports=function(e){var t=n.nc;t&&e.setAttribute("nonce",t)}},795:e=>{e.exports=function(e){var t=e.insertStyleElement(e);return{update:function(n){!function(e,t,n){var o="";n.supports&&(o+="@supports (".concat(n.supports,") {")),n.media&&(o+="@media ".concat(n.media," {"));var r=void 0!==n.layer;r&&(o+="@layer".concat(n.layer.length>0?" ".concat(n.layer):""," {")),o+=n.css,r&&(o+="}"),n.media&&(o+="}"),n.supports&&(o+="}");var a=n.sourceMap;a&&"undefined"!=typeof btoa&&(o+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(a))))," */")),t.styleTagTransform(o,e,t.options)}(t,e,n)},remove:function(){!function(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e)}(t)}}}},589:e=>{e.exports=function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}}}},t={};function n(o){var r=t[o];if(void 0!==r)return r.exports;var a=t[o]={id:o,exports:{}};return e[o](a,a.exports,n),a.exports}n.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return n.d(t,{a:t}),t},n.d=(e,t)=>{for(var o in t)n.o(t,o)&&!n.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:t[o]})},n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),n.nc=void 0,(()=>{const e=function(e,t,n,o,r,a="black"){e.beginPath(),e.moveTo(t,n),e.lineTo(o,r),e.strokeStyle=a,e.stroke(),e.closePath()},t=function(e,t="",n){e.innerText=t,e.classList.add("buttons"),e.addEventListener("click",(()=>{console.log("lsm---lsmmmmmm"),e.style.cssText="background-color: #ddd;",setTimeout((()=>{e.style.cssText="background-color: #eee;"}),100),n&&n()}))};var o=n(379),r=n.n(o),a=n(795),c=n.n(a),s=n(569),i=n.n(s),l=n(565),d=n.n(l),u=n(216),p=n.n(u),f=n(589),m=n.n(f),v=n(74),h={};h.styleTagTransform=m(),h.setAttributes=d(),h.insert=i().bind(null,"head"),h.domAPI=c(),h.insertStyleElement=p(),r()(v.Z,h),v.Z&&v.Z.locals&&v.Z.locals,console.log("!!!!!!!!!!!!!!!!!!!!!!!!");let g=function(n=300,o=150){console.log("inner====");const r=document.createElement("div");r.classList.add("autographWrap");const a=document.createElement("canvas");a.width=n,a.height=o,a.classList.add("canvas");let c=a.getContext("2d");c.fillStyle="#fff",c.fillRect(0,0,a.width,a.height),function(t,n){let o;t.addEventListener("mousedown",(r=>{console.log("鼠标",r);let a=r.offsetX,c=r.offsetY;o=r=>{let s=r.offsetX,i=r.offsetY;(s>=t.width-1||s<1||i>=t.height-1||i<1)&&t.removeEventListener("mousemove",o),e(n,a,c,s,i),a=s,c=i},t.addEventListener("mousemove",o)})),t.addEventListener("mouseup",(()=>{console.log("抬起"),t.removeEventListener("mousemove",o)}))}(a,c);let s=function(e,n){const o=document.createElement("div");o.classList.add("buttongroup");const r=document.createElement("span");t(r,"清除签名",(function(){n.clearRect(0,0,e.width,e.height)}));const a=document.createElement("span");return t(a,"保存画布",(function(){let t=e.toDataURL("image/jpeg");console.log("lsm---------imgs",t);const n=document.createElement("a");n.href=t,n.download="autograph.jpg",document.body.appendChild(n),n.click(),document.body.removeChild(n),console.log(1111)})),o.appendChild(r),o.appendChild(a),o}(a,c);return r.appendChild(a),r.appendChild(s),r}(600,250);console.log("canvascanvascanvascanvas===",g),document.body.appendChild(g),console.log("花花世界")})()})();
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["autograph"] = factory();
+	else
+		root["autograph"] = factory();
+})(globalThis, () => {
+return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ src)
+});
+
+;// CONCATENATED MODULE: ./src/autograph.js
+const autograph = function (canvasWidth = 300, canvasHeight = 150 , textColor = 'black') {
+  // 创建导出容器
+  const autographWrap = document.createElement('div')
+  autographWrap.classList.add('autographWrap')
+  autographWrap.style.cssText = `width: ${ canvasWidth }px`
+
+  // 创建画布
+  const canvas = document.createElement('canvas')
+  canvas.width = canvasWidth
+  canvas.height = canvasHeight
+  canvas.classList.add('canvas')
+
+  // 生成画布上下文
+  let content = canvas.getContext('2d')
+  content.fillStyle = '#eee'
+  content.fillRect(0, 0, canvas.width, canvas.height)
+
+  drawGraph(canvas, content, textColor)
+
+  let buttongrap = operateCanvas(canvas, content)
+
+  // 添加画布和操作画布按钮
+  autographWrap.appendChild(canvas)
+  autographWrap.appendChild(buttongrap)
+
+  return autographWrap
+}
+
+// 监听鼠标事件，实现签名
+const drawGraph = function (canvas, content, textColor) {
+  // 鼠标移动事件回调
+  let cbMove;
+  // 鼠标按下事件回调
+  let cbDown = (event) => {
+    let xStart = event.offsetX
+    let yStart = event.offsetY
+
+    let startDraw = (event) => {
+      let xEnd = event.offsetX
+      let yEnd = event.offsetY
+      if (xEnd >= canvas.width - 2 || xEnd < 2 || yEnd >= canvas.height - 2 || yEnd < 2) {
+        canvas.removeEventListener('mousemove', cbMove)
+      }
+      strokeLine(content, xStart, yStart, xEnd, yEnd, textColor)
+      xStart = xEnd
+      yStart = yEnd
+    }
+    cbMove = startDraw
+    canvas.addEventListener('mousemove', cbMove)
+  }
+
+  canvas.addEventListener('mousedown', cbDown)
+  canvas.addEventListener('mouseup', () => {
+    canvas.removeEventListener('mousemove', cbMove)
+  })
+}
+
+// 定义画线的方法
+const strokeLine = function (content, xStart, yStart, xEnd, yEnd, color) {
+  content.beginPath()
+  content.moveTo(xStart, yStart)
+  content.lineTo(xEnd, yEnd)
+  content.strokeStyle = color
+  content.stroke()
+  content.closePath()
+}
+
+// 对画布进行相关操作
+const operateCanvas = function (canvas, content) {
+
+  const buttongroup = document.createElement('div')
+  buttongroup.classList.add('buttongroup')
+
+  // 清除画布
+  function clearButtonMeth() {
+    content.clearRect(0, 0, canvas.width, canvas.height);
+    content.fillStyle = '#eee'
+    content.fillRect(0, 0, canvas.width, canvas.height)
+  }
+  let clearButton = bindingAttrAndMeth('清除签名', clearButtonMeth)
+
+  //  保存画布
+  function preserveCanvasMeth() {
+    let imgs = canvas.toDataURL("image/jpeg")
+    const link = document.createElement('a')
+    link.href = imgs
+    link.download = 'autograph.jpg'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    clearButtonMeth()
+  }
+  let preserveCanvas = bindingAttrAndMeth('保存签名', preserveCanvasMeth)
+
+  buttongroup.appendChild(clearButton)
+  buttongroup.appendChild(preserveCanvas)
+
+  return buttongroup
+}
+
+
+// 生成操作canvas的按钮
+const bindingAttrAndMeth = function (innerText = '', callback) {
+  const button = document.createElement('span')
+  button.innerText = innerText
+  button.classList.add('buttons')
+  button.addEventListener('click', () => {
+    button.style.cssText = 'background-color: #ccc;'
+    setTimeout(() => {
+      button.style.cssText = 'background-color: #ddd;'
+    }, 100);
+    callback && callback()
+  })
+
+  return button
+}
+
+/* harmony default export */ const src_autograph = (autograph);
+;// CONCATENATED MODULE: ./src/index.js
+
+
+
+
+/* harmony default export */ const src = (src_autograph);
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
+});

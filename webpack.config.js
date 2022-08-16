@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -24,6 +26,9 @@ module.exports = {
       filename: 'app.html',
       template: './index.html',
       inject: 'body'
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'index.css'
     })
   ],
 
@@ -32,11 +37,17 @@ module.exports = {
       {
         test: /\.(css|less)$/,
         use:[
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'less-loader'
         ]
       }
+    ]
+  },
+
+  optimization: {
+    minimizer: [
+      new CssMinimizerWebpackPlugin()
     ]
   }
 }
