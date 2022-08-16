@@ -1,6 +1,6 @@
 {
   "name": "autograph-canvas",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "用canvas实现签名",
   "main": "dist/autograph.js",
   "scripts": {

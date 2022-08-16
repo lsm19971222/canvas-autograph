@@ -1,4 +1,4 @@
-const autograph = function ({canvasWidth = 300, canvasHeight = 150, imgType = 'image/png', textColor = 'black', saveCb}) {
+const autograph = function ({canvasWidth = 400, canvasHeight = 200, imgType = 'image/png', textColor = 'black', saveCb} = {}) {
   // 创建导出容器
   const autographWrap = document.createElement('div')
   autographWrap.classList.add('autographWrap')

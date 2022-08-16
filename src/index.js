@@ -2,7 +2,7 @@ import canvasAutograph from './autograph.js'
 
 import './index.less'
 
-// const ele = canvasAutograph({
+// let params = {
 //   canvasWidth:500,
 //   canvasHeight:250 ,
 //   imgType: 'image/jpeg',
@@ -10,7 +10,8 @@ import './index.less'
 //   saveCb: (res) => {
 //     console.log('resssss==', res)
 //   }
-// })
+// }
+// const ele = canvasAutograph(params)
 // document.body.appendChild(ele)
 
 export default canvasAutograph

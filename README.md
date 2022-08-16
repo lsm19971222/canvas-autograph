@@ -30,7 +30,7 @@ autograph接收一个对象，对象中可以设置如下参数
   5.saveCb: 点击保存按钮时候的回调函数
 ```
 
-## 案例
+## example
 ```
 import canvasAutograph from './autograph.js'
 
@@ -47,4 +47,10 @@ const ele = canvasAutograph({
 })
 document.body.appendChild(ele)
 
+```
+## question
+```
+1.默认情况下，点击保存签名，除了返回图片url，还会下载图片，未做控制，待优化
+2.保存图片之后，默认清除画布，未做控制，待优化
+3.不兼容H5
 ```
