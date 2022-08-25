@@ -1,4 +1,11 @@
-const autograph = function ({canvasWidth = 400, canvasHeight = 200, imgType = 'image/png', textColor = 'black', saveCb} = {}) {
+const autograph = function ({
+  canvasWidth = 400,
+  canvasHeight = 200,
+  imgType = 'image/png',
+  textColor = 'black',
+  isDownload = false,
+  isClearCanvas = false,
+  saveCb} = {}) {
   // 创建导出容器
   const autographWrap = document.createElement('div')
   autographWrap.classList.add('autographWrap')
@@ -17,7 +24,7 @@ const autograph = function ({canvasWidth = 400, canvasHeight = 200, imgType = 'i
 
   drawGraph(canvas, content, textColor)
 
-  let buttongrap = operateCanvas(canvas, content, imgType, saveCb)
+  let buttongrap = operateCanvas(canvas, content, imgType, isDownload, isClearCanvas, saveCb)
 
   // 添加画布和操作画布按钮
   autographWrap.appendChild(canvas)
@@ -85,7 +92,7 @@ const strokeLine = function (content, xStart, yStart, xEnd, yEnd, color) {
 }
 
 // 对画布进行相关操作
-const operateCanvas = function (canvas, content, imgType, saveCb) {
+const operateCanvas = function (canvas, content, imgType, isDownload, isClearCanvas, saveCb) {
 
   const buttongroup = document.createElement('div')
   buttongroup.classList.add('buttongroup')
@@ -102,13 +109,14 @@ const operateCanvas = function (canvas, content, imgType, saveCb) {
   function preserveCanvasMeth() {
     let imgs = canvas.toDataURL(imgType)
     saveCb && saveCb(imgs)
+    if (!isDownload) return;
     const link = document.createElement('a')
     link.href = imgs
     link.download = `autograph.${imgType ? imgType.split('/')[1] : 'png'}`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
-    clearButtonMeth()
+    isClearCanvas && clearButtonMeth()
   }
   let preserveCanvas = bindingAttrAndMeth('保存签名', preserveCanvasMeth)
 

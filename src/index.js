@@ -7,6 +7,8 @@ import './index.less'
 //   canvasHeight:250 ,
 //   imgType: 'image/jpeg',
 //   textColor: 'red',
+//   isDownload: false,
+//   isClearCanvas: false,
 //   saveCb: (res) => {
 //     console.log('resssss==', res)
 //   }
